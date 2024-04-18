@@ -3,6 +3,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+.game-start{
+    display: flex;
+    position: absolute;
+    color: wheat;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.712);
+}
+
+.game-start > p{
+    color: red;
+}
+
+.btnStart{
+    color: aliceblue;
+    cursor: pointer;
+    background-color: #578510;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 120px;
+}
 
 .game-board {
     width: 100%;
