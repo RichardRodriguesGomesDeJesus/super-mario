@@ -12,6 +12,8 @@ const jump = () => {
     }, 500);
 }
 
+document.addEventListener('keydown', jump);
+
 btnStart.addEventListener("click", ()=>{
     document.querySelector('.game-start').remove()
     pipe.classList.add("activePipe")
@@ -41,5 +43,3 @@ const loop = setInterval(() => {
     } 
 
 }, 10);
-
-document.addEventListener('keydown', jump);
