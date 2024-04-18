@@ -11,14 +11,20 @@
 <body>
     
     <div class="game-board">
+        <img src="./imgs/clouds.png" class="clouds" alt="">
         <img src="./imgs/mario.gif" class="mario jump" alt="">
         <img src="./imgs/pipe.png" class="pipe" alt="">
         
     </div>
-
-
-
-
-
+    <div class="game-start" >
+        <img src="/imgs/MarioTitle.svg">
+        <button class="btnStart" onclick="document.querySelector('.game-start').remove()">iniciar</button>
+        <p>Istruções para usuários de PC`s!</p>
+        <ul>
+            <li>Clique em "Enter" para iniciar/reiniciar.</li>
+            <li>Clique em "Espaço" para pular.</li>
+            <li>Clique em "p" para pausar.</li>
+        </ul>
+    </div>
 </body>
 </html>
