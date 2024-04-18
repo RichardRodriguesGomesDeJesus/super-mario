@@ -84,3 +84,11 @@
         bottom: 0;
     }
 }
+@keyframes clouds {
+    from {
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+}
