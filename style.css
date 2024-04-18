@@ -4,12 +4,21 @@
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 .press-start-2p-regular {
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
   }
   
+=======
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds 10s infinite linear;
+}
+
+>>>>>>> 1896b0a839238fa4212b3b7311604040ecef65ba
 .game-start{
     display: flex;
     position: absolute;
@@ -89,5 +98,13 @@
     }
     100%{
         bottom: 0;
+    }
+}
+@keyframes clouds {
+    from {
+        right: -550px;
+    }
+    to{
+        right: 100%;
     }
 }
