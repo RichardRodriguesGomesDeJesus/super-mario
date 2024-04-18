@@ -7,7 +7,6 @@
 .clouds{
     position: absolute;
     width: 550px;
-    animation: clouds 10s infinite linear;
 }
 
 .game-start{
@@ -53,7 +52,6 @@
      bottom: 0;
      width: 80px;
      right: -80px;
-    animation: pipe-animation 1.5s infinite linear;
 }
 .mario {
     width: 150px;

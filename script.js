@@ -1,9 +1,7 @@
-      
-
-
-
+const btnStart = document.querySelector(".btnStart")
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+const clouds = document.querySelector(".clouds")
 const jump = () => {
     mario.classList.add('jump');
 
@@ -14,14 +12,17 @@ const jump = () => {
     }, 500);
 }
 
+btnStart.addEventListener("click", ()=>{
+    document.querySelector('.game-start').remove()
+    pipe.style.animation = "pipe-animation 1.5s infinite linear"
+    clouds.style.animation = "clouds 10s infinite linear"
+})
 const loop = setInterval(() => {
   
     console.log('loop')
 
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-
-    
 
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
 
