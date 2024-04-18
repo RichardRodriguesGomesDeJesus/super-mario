@@ -7,6 +7,7 @@
 .clouds{
     position: absolute;
     width: 550px;
+    animation: clouds 10s infinite linear;
 }
 
 .game-start{
@@ -92,7 +93,7 @@
 }
 @keyframes clouds {
     from {
-        right: 0;
+        right: -550px;
     }
     to{
         right: 100%;
