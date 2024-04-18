@@ -10,6 +10,25 @@
     width: 550px;
 }
 
+.activeClouds{
+    animation: clouds 10s infinite linear;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.bricks { 
+    background-image: url("/imgs/chao.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    width: 100vw;
+}
+
 .game-start{
     display: flex;
     position: absolute;
@@ -41,11 +60,12 @@
 .game-board {
     width: 100%;
     height: 500px;
-    border-bottom: 15px solid rgb(0, 128, 0);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF);
+    border-bottom: 15px solid green;
+
 }
 
 .pipe {
@@ -54,6 +74,11 @@
      width: 80px;
      right: -80px;
 }
+
+.activePipe { 
+    animation: pipe-animation 1.5s infinite linear;
+}
+
 .mario {
     width: 150px;
     position: absolute;
