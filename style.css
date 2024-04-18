@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.clouds{
+    position: absolute;
+    width: 550px;
+}
+
 .game-start{
     display: flex;
     position: absolute;
