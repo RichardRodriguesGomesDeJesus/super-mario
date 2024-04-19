@@ -56,12 +56,6 @@ body{
     font-size: 1.2rem;
 }
 
-.game-start > ul{
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-}
-
 .btnStart, .btnRestart{
     color: aliceblue;
     cursor: pointer;

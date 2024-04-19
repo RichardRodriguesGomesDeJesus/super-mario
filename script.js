@@ -53,6 +53,7 @@ const loop = setInterval(() => {
         clearInterval(loop);
         somdefundo.pause()
         gameover.play()
+        document.querySelector('.game-over').classList.add("game-over__start")
     } 
 
 }, 10);
