@@ -28,7 +28,7 @@ btnStart.addEventListener("click", ()=>{
     somdefundo.play()
 })
 
-btnRestart.addEventListener("click", (e)=>{
+btnRestart.addEventListener("click", ()=>{
     location.reload()
 })
 
@@ -51,7 +51,6 @@ const loop = setInterval(() => {
         pipe.classList.remove("activePipe")
         clouds.classList.remove("activeClouds")
         clearInterval(loop);
-        document.querySelector(".game-over").classList.add("game-over__start")
         somdefundo.pause()
         gameover.play()
     } 
