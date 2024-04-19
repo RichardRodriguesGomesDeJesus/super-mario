@@ -29,7 +29,7 @@ body{
     width: 100vw;
 }
 
-.game-start{
+.game-start, .game-over{
     display: flex;
     position: absolute;
     color: wheat;
@@ -41,25 +41,36 @@ body{
     flex-direction: column;
     justify-content: space-around;
     background: rgba(0, 0, 0, 0.712);
+    z-index: 9000;
+}
+.game-over{
+    display: none;
 }
 
-.game-start > p{
-    color: red;
+.game-over__start{
+    display: flex;
 }
+
+.game-over > p{
+    color: red;
+    font-size: 1.2rem;
+}
+
 .game-start > ul{
     gap: 16px;
     display: flex;
     flex-direction: column;
 }
 
-.btnStart{
+.btnStart, .btnRestart{
     color: aliceblue;
     cursor: pointer;
     background-color: #578510;
     border: none;
     border-radius: 8px;
+    padding: 1rem;
     height: 40px;
-    width: 120px;
+    min-width: 120px;
 }
 
 .game-board {
@@ -85,9 +96,13 @@ body{
 .mario {
     width: 150px;
     position: absolute;
-    bottom: 0;
-    
+    bottom: 0;   
 }
+
+.marioStart{
+    bottom: 0;
+}
+
 .jump{
     animation: jump 500ms  ease-out;
 }
@@ -101,6 +116,7 @@ body{
     right: 100%;
   }
 }
+
 @keyframes jump{
     0%{
         bottom: 0;

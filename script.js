@@ -5,7 +5,7 @@ const clouds = document.querySelector(".clouds")
 const gameover = new Audio ('./sons/game-over.mp3')
 const pulo = new Audio ('./sons/pulo.mp3')
 const somdefundo = new Audio ('./sons/som-de-fundo.mp3')
-
+const btnRestart = document.querySelector(".btnRestart")
 
 somdefundo.loop = true 
 
@@ -28,6 +28,10 @@ btnStart.addEventListener("click", ()=>{
     somdefundo.play()
 })
 
+btnRestart.addEventListener("click", (e)=>{
+    location.reload()
+})
+
 const loop = setInterval(() => {
   
     console.log('loop')
@@ -38,7 +42,6 @@ const loop = setInterval(() => {
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`; 
-
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosition}px`;    
         mario.src = './imgs/game-over.png';
@@ -48,6 +51,7 @@ const loop = setInterval(() => {
         pipe.classList.remove("activePipe")
         clouds.classList.remove("activeClouds")
         clearInterval(loop);
+        document.querySelector(".game-over").classList.add("game-over__start")
         somdefundo.pause()
         gameover.play()
     } 
