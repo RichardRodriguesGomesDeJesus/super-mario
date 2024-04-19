@@ -77,7 +77,7 @@ body{
 }
 
 .pipe {
-    position: absolute;
+     position: absolute;
      bottom: 0;
      width: 80px;
      right: -80px;
@@ -99,6 +99,13 @@ body{
 
 .jump{
     animation: jump 500ms  ease-out;
+}
+
+.score{
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    font-size: x-large;
 }
 
 @keyframes pipe-animation{

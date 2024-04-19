@@ -6,6 +6,10 @@ const gameover = new Audio ('./sons/game-over.mp3')
 const pulo = new Audio ('./sons/pulo.mp3')
 const somdefundo = new Audio ('./sons/som-de-fundo.mp3')
 const btnRestart = document.querySelector(".btnRestart")
+const score = document.querySelector(".score")
+
+let count = 0 
+let scorePoitns
 
 somdefundo.loop = true 
 
@@ -26,6 +30,10 @@ btnStart.addEventListener("click", ()=>{
     pipe.classList.add("activePipe")
     clouds.classList.add("activeClouds")
     somdefundo.play()
+    scorePoitns = setInterval (() => {
+        count ++
+        score.innerHTML = `SCORE: ${count}`
+    },100)
 })
 
 btnRestart.addEventListener("click", ()=>{
@@ -54,6 +62,8 @@ const loop = setInterval(() => {
         somdefundo.pause()
         gameover.play()
         document.querySelector('.game-over').classList.add("game-over__start")
+        clearInterval(scorePoitns)
     } 
 
 }, 10);
+
