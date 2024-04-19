@@ -2,16 +2,16 @@ const btnStart = document.querySelector(".btnStart")
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
 const clouds = document.querySelector(".clouds")
-const gameover = document.querySelector('./sons/game-over.mp3')
-const pulo = document.querySelector('./sons/pulo.mp3')
-const somdefundo = document.querySelector('./sons/som-de-fundo.mp3')
+const gameover = new Audio ('./sons/game-over.mp3')
+const pulo = new Audio ('./sons/pulo.mp3')
+const somdefundo = new Audio ('./sons/som-de-fundo.mp3')
 const jump = () => {
     mario.classList.add('jump');
+    pulo.play()
 
     setTimeout(() => {
 
         mario.classList.remove('jump');
-
     }, 500);
 }
 
