@@ -5,6 +5,10 @@ const clouds = document.querySelector(".clouds")
 const gameover = new Audio ('./sons/game-over.mp3')
 const pulo = new Audio ('./sons/pulo.mp3')
 const somdefundo = new Audio ('./sons/som-de-fundo.mp3')
+
+
+somdefundo.loop = true 
+
 const jump = () => {
     mario.classList.add('jump');
     pulo.play()
@@ -21,6 +25,7 @@ btnStart.addEventListener("click", ()=>{
     document.querySelector('.game-start').remove()
     pipe.classList.add("activePipe")
     clouds.classList.add("activeClouds")
+    somdefundo.play()
 })
 
 const loop = setInterval(() => {
@@ -43,6 +48,8 @@ const loop = setInterval(() => {
         pipe.classList.remove("activePipe")
         clouds.classList.remove("activeClouds")
         clearInterval(loop);
+        somdefundo.pause()
+        gameover.play()
     } 
 
 }, 10);
