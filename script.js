@@ -2,6 +2,9 @@ const btnStart = document.querySelector(".btnStart")
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
 const clouds = document.querySelector(".clouds")
+const gameover = document.querySelector('./sons/game-over.mp3')
+const pulo = document.querySelector('./sons/pulo.mp3')
+const somdefundo = document.querySelector('./sons/som-de-fundo.mp3')
 const jump = () => {
     mario.classList.add('jump');
 
