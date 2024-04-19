@@ -29,6 +29,14 @@ body{
     width: 100vw;
 }
 
+.record{
+    color: brown;
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    font-size: x-large;
+}
+
 .game-start, .game-over{
     display: flex;
     position: absolute;

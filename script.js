@@ -7,6 +7,8 @@ const pulo = new Audio ('./sons/pulo.mp3')
 const somdefundo = new Audio ('./sons/som-de-fundo.mp3')
 const btnRestart = document.querySelector(".btnRestart")
 const score = document.querySelector(".score")
+let recordPonts = localStorage.getItem("Record") != null ? localStorage.getItem("Record") : 0
+const record = document.querySelector(".record")
 
 let count = 0 
 let scorePoitns
@@ -32,6 +34,7 @@ btnStart.addEventListener("click", ()=>{
     somdefundo.play()
     scorePoitns = setInterval (() => {
         count ++
+        record.innerHTML = `RECORD: ${recordPonts}`
         score.innerHTML = `SCORE: ${count}`
     },100)
 })
@@ -41,9 +44,6 @@ btnRestart.addEventListener("click", ()=>{
 })
 
 const loop = setInterval(() => {
-  
-    console.log('loop')
-
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     const cloudsPosition = +window.getComputedStyle(clouds).right.replace('px', '')
@@ -63,6 +63,12 @@ const loop = setInterval(() => {
         gameover.play()
         document.querySelector('.game-over').classList.add("game-over__start")
         clearInterval(scorePoitns)
+        if (count > recordPonts) {
+            recordPonts = count
+            localStorage.removeItem("Record")
+            localStorage.setItem("Record", JSON.stringify(recordPonts))
+        }
+
     } 
 
 }, 10);
